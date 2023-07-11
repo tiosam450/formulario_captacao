@@ -1,0 +1,54 @@
+  .js .labelLista,   .js .labelLista2 {
+      display: block;
+      margin: 1rem auto;
+      width: 50%;
+      padding: .5rem 0;
+      background: var(--highlight);
+      color: #fff;
+      font-size: 1em;
+      transition: all .2s ease-in-out;
+      cursor: pointer;
+      border-radius: 50px;
+  }
+
+  .js .labelLista:hover, .js .labelLista2:hover {
+      transform: scale(1.03);
+      background: #4980c0;
+  }
+
+  .js .cLista, .js .cLista2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 225px;
+      opacity: 0;
+      padding: 14px 0;
+      cursor: pointer;
+  }
+
+  .js .cLista:hover+.labelLista,  .js .cLista:focus+.labelLista,  .js .labelLista:hover,  .js .labelLista:focus, .js .cLista2:hover+.labelLista,  .js .cLista2:focus+.labelLista,  .js .labelLista2:hover,  .js .labelLista2:focus {
+      background: var(--highlight);
+      color: white;
+  }
+
+  .file-return, .file-return2 {
+      margin: 0;
+  }
+
+  .file-return:not(:empty), .file-return2:not(:empty)  {
+      margin: 0 0 1rem;
+  }
+
+  .js .file-return, .js .file-return2 {
+      font-style: italic;
+      font-size: .9em;
+      font-weight: bold;
+      color: grey;
+  }
+
+  .js .file-return:not(:empty):before, .js .file-return2:not(:empty):before {
+      content: "Arquivo selecionado: ";
+      font-style: normal;
+      font-weight: normal;
+      color: grey;
+  }

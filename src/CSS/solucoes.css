@@ -1,0 +1,146 @@
+.containerSolucoes{
+    width: 100%;
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: 1fr minmax(300px, 1200px) 1fr;
+    width: 100%;
+    background: var(--bg2);
+}
+
+.solucoes{
+    width: 100%;
+    grid-column: 2/3;
+    padding: 4rem 2rem;
+}
+
+.solucoes h1{
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--azul);
+}
+
+.solucoes h2{
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--base);
+    margin-bottom: 4rem;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 180px));
+    place-content: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem;
+    text-align: center;
+}
+
+.card p{
+    margin: 1rem 0 0 0;
+}
+
+.card a{
+    color: var(--base);
+    padding: .5rem 1rem;
+    background: var(--destaque);
+    border-radius: 8px;
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s all ease-in-out;
+}
+
+.card a:hover{
+    background: #ffdf2b;
+    transform: scale(1.03);
+}
+
+
+@media ((min-width: 1366px) and (max-width: 1920px)) {
+
+}
+
+@media ((min-width: 951px) and (max-width: 1365px)) {
+
+}
+
+@media ((max-width: 950px)) {
+    .solucoes{
+        width: 100%;
+        grid-column: 2/3;
+        padding: 2rem 0;
+    }
+    
+    .solucoes h1{
+        font-size: 3rem;
+        font-weight: 900;
+        color: var(--azul);
+        margin: 0 3rem 0;
+    }
+    
+    .solucoes h2{
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--base);
+        margin: 0 3rem 2rem;
+    }
+    
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(90px, 150px));
+        place-content: center;
+    }
+    
+    .card{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1.5rem 1rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 349px) {
+    .solucoes{
+        width: 100%;
+        grid-column: 2/3;
+        padding: 4rem 0;
+    }
+    
+    .solucoes h1{
+        font-size: 3rem;
+        font-weight: 900;
+        color: var(--azul);
+        margin: 0 1rem 0;
+    }
+    
+    .solucoes h2{
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--base);
+        margin: 0 1rem 2rem;
+    }
+    
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(90px, 150px));
+        place-content: center;
+    }
+    
+    .card{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1.5rem 1rem;
+        text-align: center;
+    }
+}

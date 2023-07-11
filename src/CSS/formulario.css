@@ -1,0 +1,196 @@
+.geral {
+    display: grid;
+    grid-template-columns: 1fr minmax(300px, 1200px) 1fr;
+    width: 100%;
+}
+
+.containerFormulario {
+    grid-column: 1/4;
+    display: flex;
+    place-content: center;
+    width: 100%;
+    background: var(--bg1);
+    padding: 2rem 0;
+}
+
+.formulario {
+    grid-column: 2/3;
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+}
+
+.formulario h3 {
+    font-size: 1.6rem;
+    color: var(--base);
+    margin: 0 3rem;
+    flex: 1 1 40%;
+}
+
+form {
+    flex: 3 3 3;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    min-width: 340px;
+    margin: 3rem;
+    flex: 1 1 60%;
+}
+
+input {
+    width: 100%;
+    padding: .5rem 1rem;
+    margin: 0 0 1rem;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    background: var(--bg1);
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+input[type="email"] {
+    text-transform: initial;
+}
+
+input::placeholder,
+label {
+    color: var(--base);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+input[type="file"]::file-selector-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    background: var(--highlight);
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: 50px;
+    margin: 1rem auto;
+}
+
+input[type="file"] {
+    background: none;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+}
+
+label {
+    font-size: 1rem;
+    margin: 1rem 0 -.3rem;
+}
+
+#btnEnviar {
+    background: var(--base);
+    color: white;
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    transition: .2s all ease-in-out;
+    border-radius: 50px;
+    cursor: pointer;
+    padding: .5rem 1rem;
+    border-radius: 50px;
+    margin: 1rem auto;
+    outline: none;
+    border: none;
+}
+
+#btnEnviar:hover {
+    background: #1753a3;
+    transform: scale(1.03);
+}
+
+
+@media ((min-width: 1366px) and (max-width: 1920px)) {
+    header p {
+        font-size: 1rem;
+        margin-left: 28%;
+    }
+
+    header img {
+        max-width: 150px;
+        margin-right: 10%;
+    }
+}
+
+@media ((min-width: 951px) and (max-width: 1365px)) {}
+
+@media ((max-width: 950px)) {
+    header p {
+        font-size: 1rem;
+        margin-left: 0;
+    }
+
+    header img {
+        max-width: 150px;
+        margin-right: 0;
+    }
+
+    .formulario {
+        flex-direction: column;
+        align-items: center;
+        max-width: 90%;
+    }
+
+    .formulario h3 {
+        font-size: 1.3rem;
+        text-align: center;
+        margin: 0 1rem;
+    }
+
+    form {
+        padding: 2rem 1rem;
+        min-width: 320px;
+        margin: 3rem 0 1rem;
+    }
+
+}
+
+@media (max-width: 349px) {
+    header p {
+        grid-column: 2;
+        grid-row: initial;
+        justify-self: center;
+        margin-left: 0;
+        text-align: center;
+        color: white;
+        font-size: 1.3rem;
+    }
+
+    header img {
+        grid-column: 2;
+        grid-row: initial;
+        justify-self: center;
+        max-width: 150px;
+        margin-right: 0;
+    }
+
+    .formulario {
+        max-width: 300px;
+    }
+
+    .formulario h3 {
+        font-size: 1.3rem;
+        margin: 0 1rem;
+    }
+
+    form {
+        padding: 2rem 1rem;
+        min-width: 90%;
+        margin: 3rem 0;
+    }
+}

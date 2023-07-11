@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Cobra Informática</title>
+    <link rel="shortcut icon" href="./src/IMG/icones/icone_cobra_informatica.svg" type="image/x-icon">
+</head>
+
+<link rel="stylesheet" href="./src/CSS/style.css">
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<!-- INCLUI CABEÇALHO E RODAPÉ -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    $(function () {
+        $("header").load("./src/HTML/cabecalho.html");
+        $("footer").load("./src/HTML/rodape.html");
+    });
+</script>
+
+    <!-- ENVIO DE E-MAILS -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<body>
+    <!-- HEADER INSERIDO COM FUNÇÂO "CABEÇALHO E RODAPÉ" -->
+    <header></header>
+    <section class="geral">
+        <section class="containerFormulario">
+            <div class="formulario">
+                <h3>Preencha o formulário, anexe sua lista e fotos, e avaliaremos seus equipamentos de informática.</h3>
+                <form method="POST" action="https://formsubmit.co/compras@cobrainformatica.com" enctype="multipart/form-data">
+                    <input type="text" id="nome" name="nome" placeholder="Nome" required>
+                    <input type="email" id="email" name="email" placeholder="E-mail" required>
+                    <input type="tel" id="telefone" name="telefone" placeholder="Telefone" maxlength="15" required>
+                    <input type="text" id="empresa" name="empresa" placeholder="Empresa" required>
+                    <input type="text" id="setor" name="setor" placeholder="Setor">
+
+                    <label for="lista">Envie sua lista de equipamentos</label>
+                    <label tabindex="0" for="lista" class="labelLista">Arquivo</label>
+                    <input type="file" id="lista" class="cLista" name="Lista de Arquivos" multiple="multiple">
+                    <div class="listaDeArquivos"></div>
+
+                    <label for="lista2">Envie fotos dos equipamentos</label>
+                    <label tabindex="0" for="lista2" class="labelLista2">Arquivo</label>
+                    <input type="file" id="lista2" class="cLista2" name="Fotos dos Equipamentos" multiple="multiple">
+                    <div class="listaDeArquivos2"></div>
+
+                    <p>Para enviar mais de um arquivo, utilize os formatos .zip ou .rar</p>
+                    <input type="hidden" name="_subject" value="Contato do formulário Cobra Informática">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://cobrainformatica.com/formulario/src/HTML/tela_de_confirmacao.html">
+                    <input type="text" name="_honey" style="display:none">
+                    <button  id="btnEnviar" class="g-recaptcha" data-sitekey="6LcUKR8iAAAAAF3z_nSg9a75J55cYc1594lxrOPq" data-callback='onSubmit' name="enviar" type="submit" data-action='submit'>Enviar</button>
+                    <style>.grecaptcha-badge{ display: none !important}</style>
+                </form>
+            </div>
+        </section>
+
+        <section class="containerSolucoes">
+            <div class="solucoes">
+                <h1>Soluções</h1>
+                <h2>ITAD</h2>
+                <div class="cards">
+                    <div class="card">
+                        <img src="./src/IMG/icones/icone_aquisicao_de_equipamentos.svg" alt="">
+                        <p>Aquisição de<br>Equipamentos de Informática</p>  
+                        <a href="./src/HTML/aquisicao_de_equipamentos_de_informatica.html">Saiba mais</a> 
+                    </div>
+                    
+                    <div class="card">
+                        <img src="./src/IMG/icones/icone_destruicao_de_dados.svg" alt="">
+                        <p>Destruição de<br>Dados</p>  
+                        <a href="./src/HTML/destruicao_de_dados.html">Saiba mais</a> 
+                    </div>
+                    
+                    <div class="card">
+                        <img src="./src/IMG/icones/icone_descaracterizacao.svg" alt="">
+                        <p>Descaracterização<br>de equipamentos</p>  
+                        <a href="./src/HTML/descaracterizacao_de_equipamentos.html">Saiba mais</a> 
+                    </div>
+                    
+                    <div class="card">
+                        <img src="./src/IMG/icones/icone_logistica_reversa.svg" alt="">
+                        <p>Logística Reversa<br>Lei: 12.305</p>  
+                        <a href="./src/HTML/logistica_reversa.html">Saiba mais</a> 
+                    </div>
+                   
+                    <div class="card">
+                        <img src="./src/IMG/icones/icone_certificacoes.svg" alt="">
+                        <p>Certificações</p>  
+                        <a href="./src/HTML/certificacoes.html">Saiba mais</a> 
+                    </div>
+
+                    <div class="card">
+                        <img src="./src/IMG/icones/icone_reciclagem.svg" alt="">
+                        <p>Reciclagem</p>  
+                        <a href="./src/HTML/descarte_de_residuos_tecnologicos.html">Saiba mais</a> 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+    <!-- HEADER INSERIDO COM FUNÇÂO "CABEÇALHO E RODAPÉ" -->
+    <footer></footer>
+    <script type="module" src="./src/JS/scripts.js"></script>
+    <script src="./src/JS/mascara_tel.js"></script>
+</body>
+
+</html>
